@@ -1,0 +1,693 @@
+{
+    "template" : "lbha-*-20*",
+    "order" : 1000,
+    "settings" : {
+        "index.refresh_interval"    : -1,
+        "index.number_of_shards"    : 10,
+        "index.number_of_replicas"  : 0,
+        "index.routing.allocation.total_shards_per_node" : 1,
+        "index.optimize_auto_generated_id": true
+    },
+    "mappings" : {
+        "data" : {
+            "_all" : {
+                "enabled" : false
+            },
+            "properties" : {
+                "user-agent" : {
+                    "type"          : "string",
+                    "index"         : "not_analyzed",
+                    "doc_values"    : true,
+                    "fielddata"     : {
+                      "format"      : "doc_values"
+                    },
+                    "norms"         : {
+                      "enabled"     : false
+                    },
+                    "index_options" : "docs"
+                },
+                "host" : {
+                    "type"          : "string",
+                    "index"         : "not_analyzed",
+                    "doc_values"    : true,
+                    "fielddata"     : {
+                      "format"      : "doc_values"
+                    },
+                    "norms"         : {
+                      "enabled"     : false
+                    },
+                    "index_options" : "docs"
+                },
+                "url" : {
+                    "type"          : "string",
+                    "index"         : "not_analyzed",
+                    "doc_values"    : true,
+                    "fielddata"     : {
+                      "format"      : "doc_values"
+                    },
+                    "norms"         : {
+                      "enabled"     : false
+                    },
+                    "index_options" : "docs"
+                },
+                "lb-node-name" : {
+                    "type"          : "string",
+                    "index"         : "not_analyzed",
+                    "doc_values"    : true,
+                    "fielddata"     : {
+                      "format"      : "doc_values"
+                    },
+                    "norms"         : {
+                      "enabled"     : false
+                    },
+                    "index_options" : "docs"
+                },
+                "protocol" : {
+                    "type"          : "string",
+                    "index"         : "not_analyzed",
+                    "doc_values"    : true,
+                    "fielddata"     : {
+                      "format"      : "doc_values"
+                    },
+                    "norms"         : {
+                      "enabled"     : false
+                    },
+                    "index_options" : "docs"
+                },
+                "isp" : {
+                    "type"          : "string",
+                    "index"         : "not_analyzed",
+                    "doc_values"    : true,
+                    "fielddata"     : {
+                      "format"      : "doc_values"
+                    },
+                    "norms"         : {
+                      "enabled"     : false
+                    },
+                    "index_options" : "docs"
+                },
+                "area" : {
+                    "type"          : "string",
+                    "index"         : "not_analyzed",
+                    "doc_values"    : true,
+                    "fielddata"     : {
+                      "format"      : "doc_values"
+                    },
+                    "norms"         : {
+                      "enabled"     : false
+                    },
+                    "index_options" : "docs"
+                },
+                "vip" : {
+                    "type"          : "string",
+                    "index"         : "not_analyzed",
+                    "doc_values"    : true,
+                    "fielddata"     : {
+                      "format"      : "doc_values"
+                    },
+                    "norms"         : {
+                      "enabled"     : false
+                    },
+                    "index_options" : "docs"
+                },
+                "bin" : {
+                    "type"          : "long",
+                    "index"         : "not_analyzed",
+                    "doc_values"    : true,
+                    "fielddata"     : {
+                      "format"      : "doc_values"
+                    },
+                    "norms"         : {
+                      "enabled"     : false
+                    },
+                    "index_options" : "docs"
+                },
+                "bout" : {
+                    "type"          : "long",
+                    "index"         : "not_analyzed",
+                    "doc_values"    : true,
+                    "fielddata"     : {
+                      "format"      : "doc_values"
+                    },
+                    "norms"         : {
+                      "enabled"     : false
+                    },
+                    "index_options" : "docs"
+                },
+                "client-network-delay" : {
+                    "type"          : "long",
+                    "index"         : "not_analyzed",
+                    "doc_values"    : true,
+                    "fielddata"     : {
+                      "format"      : "doc_values"
+                    },
+                    "norms"         : {
+                      "enabled"     : false
+                    },
+                    "index_options" : "docs"
+                },
+                "client-side-retrans" : {
+                    "type"          : "long",
+                    "index"         : "not_analyzed",
+                    "doc_values"    : true,
+                    "fielddata"     : {
+                      "format"      : "doc_values"
+                    },
+                    "norms"         : {
+                      "enabled"     : false
+                    },
+                    "index_options" : "docs"
+                },
+                "conn2srv-l4-delay" : {
+                    "type"          : "long",
+                    "index"         : "not_analyzed",
+                    "doc_values"    : true,
+                    "fielddata"     : {
+                      "format"      : "doc_values"
+                    },
+                    "norms"         : {
+                      "enabled"     : false
+                    },
+                    "index_options" : "docs"
+                },
+                "count" : {
+                    "type"          : "long",
+                    "index"         : "not_analyzed",
+                    "doc_values"    : true,
+                    "fielddata"     : {
+                      "format"      : "doc_values"
+                    },
+                    "norms"         : {
+                      "enabled"     : false
+                    },
+                    "index_options" : "docs"
+                },
+                "srv-side-retrans" : {
+                    "type"          : "long",
+                    "index"         : "not_analyzed",
+                    "doc_values"    : true,
+                    "fielddata"     : {
+                      "format"      : "doc_values"
+                    },
+                    "norms"         : {
+                      "enabled"     : false
+                    },
+                    "index_options" : "docs"
+                },
+                "time" : {
+                    "type"          : "date",
+                    "format"        : "epoch_millis||strict_date_optional_time",
+                    "index"         : "not_analyzed",
+                    "doc_values"    : true,
+                    "fielddata"     : {
+                      "format"      : "doc_values"
+                    },
+                    "norms"         : {
+                        "enabled"   : false
+                    },
+                    "index_options" : "docs"
+                },
+                "date" : {
+                    "properties": {
+                        "year" : {
+                            "type"          : "string",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "month" : {
+                            "type"          : "string",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "day" : {
+                            "type"          : "string",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "hour" : {
+                            "type"          : "string",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        }
+                    }
+                },
+                "cache" : {
+                    "properties": {
+                        "hit" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "none" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "miss" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        }
+                    }
+                },
+                "reason" : {
+                    "properties": {
+                        "client" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "success" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "other" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        }
+                    }
+                },
+                "http-code" : {
+                    "properties": {
+                        "200" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "302" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "400" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "404" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "500" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "503" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "504" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "other" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        }
+                    }
+                },
+                "client-network-delay_buckets" : {
+                    "properties": {
+                        "10" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "20" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "50" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "100" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "200" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "500" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "1000" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "2000" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "5000" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "10000" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        }
+                    }
+                },
+                "conn2srv-l4-delay_buckets" : {
+                    "properties": {
+                        "10" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "20" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "50" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "100" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "200" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "500" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "1000" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "2000" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "5000" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        },
+                        "10000" : {
+                            "type"          : "long",
+                            "index"         : "not_analyzed",
+                            "doc_values"    : true,
+                            "fielddata"     : {
+                              "format"      : "doc_values"
+                            },
+                            "norms"         : {
+                              "enabled"     : false
+                            },
+                            "index_options" : "docs"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
